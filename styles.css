@@ -55,11 +55,6 @@ a.button:hover{
     border-color: blue;
 }
 
-a.material-icon{
-    text-decoration: none;
-    color: white;
-}
-
 #login{
     background-image: url('img/login-bg.jpg');
     height: 100vh;
@@ -89,7 +84,7 @@ input[type=button] {
     border-radius: 6px;
 }
 .navbar{
-    background-color: rgb(143, 216, 149);
+    background-color: #4caf50;
     overflow: hidden;
     height: 63px;
     text-align: center;
@@ -105,25 +100,6 @@ h1.navbar{
     margin-left: 10px;
 }
 
-.side-nav{
-    /* height:100%;
-    width:auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(164, 113, 223);
-    opacity: 0.9;
-    padding-top: 30px;
-    margin-top: 65px;
-    display: flex;
-    flex-direction: column;
-    float: left; */
-    /* float: left;
-    position: fixed;
-    display: inline; */
-    margin: 0px;
-    background-color: rgb(164, 113, 223);
-}
 li{
     list-style-type: none;
     display: inline;
@@ -137,14 +113,15 @@ div#side-menu{
     text-decoration: none;
     list-style-type: none;
     border: 1px solid;
-    padding: 10px 10px;
-    margin-right: 10px;
-    line-height: 4;
+    padding: 5px 5px;
+    margin-right: 5px;
+    line-height: 2;
     width: 200px;
     border-color: rgb(164, 113, 223);
     float: left;
     text-align: center;
     background-color: rgb(164, 113, 223);
+    color:white;
     
 }
 
@@ -172,4 +149,32 @@ div#side-menu{
     text-align: left;
     background-color: #4caf50;
     color: white;
+}
+
+div.formulate{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+input[type=submit].button {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    border: rgb(38, 86, 219) 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* background-color: rgb(38, 86, 219); */
+    background-color: none;
+    margin-top: 20px;
+}
+
+input[type=submit]:hover {
+    background-color: blue;
+    border-color: blue;
+    color: white;
+}
+form#addForm{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

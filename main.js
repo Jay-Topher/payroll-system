@@ -1,36 +1,28 @@
-let login = {
-    username: "jones",
-    password: '12345678'
-}
+$(document).ready(function() {
+    $('#addButton').on('click', function(){
+        let fullName = $('#fullname').val();
+        let position = $('#position').val();
+        let qualification = $('#qualification').val();
+        let level = $('#level').val();
+        let paymentStatus = $('#paymentStatus').val();
 
+        let employee = {
+            name: fullName,
+            position: position,
+            qualification: qualification,
+            level: level,
+            paymentStatus: paymentStatus
+        };
 
-function logSubmit() {
-    let userName = document.getElementById("username");
-    let password = document.getElementById("password");
-    if(userName == login.username && password == login.password) {
-        alert("Login Successful")
-    } else alert("Login failed");
+        $.ajax({
+            type: 'POST',
+            url: "http://localhost:3000/employees",
+            data: employee,
+            success: function(emp){
+                console.log(emp.responseText);
+            }
+        })
 
-}
-
-$("#adminForm").submit(function(e){
-    e.preventDefault();
-    logSubmit();
+    })
+    
 });
-
-function access(form) {
-    let userName = form.username.value;
-    let password = form.password.value;
-    let response = new XMLHttpRequest();
-    response.open('post', 'http://localhost:3000/password',true);
-}
-
-function openMenu(){
-    document.getElementById('side-menu').style.width = '500';
-    document.getElementById('main').style.marginLeft = '250px';
-}
-
-function closeMenu(){
-    document.getElementById('side-menu').style.width = '0px';
-    document.getElementById('main').style.marginLeft = 'auto';
-}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+    
+</head>
+<body>
+    <div class="formulate">
+        <form action="/registry.html" id="addForm">
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" name="fullname" id="fullname" required placeholder="Full Name"><br>
+            <label for="position">Position:</label><br>
+            <input type="text" id="position" placeholder="Position" required><br>
+            <label for="qualification">Qualification:</label><br>
+            <input type="text" id="qualification" placeholder="Qualification" required><br>
+            <label for="level">Level:</label><br>
+            <input type="number" name="level" id="level" required><br>
+            <label for="payment-status">Payment Status</label><br>
+            <input type="text" name="payment-status" value="false" readonly><br>
+            <input type="button" class="button" id="addButton" value="Add Data">
+    
+    
+    
+        </form>
+
+    </div>
+</body>
+</html>
