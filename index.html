@@ -5,16 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Employee Payroll</title>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="jquery-3.4.1.min.js"></script>
 </head>
 <body>
     <header id="top">
         <h1>Welcome to Jones Consolidated</h1>
         <p>This is a payroll site for employees of Jones Consolidated</p>
-        <a href="#" class="button">Admin</a>
+        <a href="#login" class="button">Admin</a>
+
+    
 
     </header>
+
+    <div id="login">
+        <form id="adminForm" onsubmit="return false">
+            Username:<br>
+            <input type="text" name="username" placeholder="Username" id="username" required><br>
+            Password:<br>
+            <input type="password" name="password" placeholder="password" id="password" required><br>
+            <a href="registry.html"><input type="button" value="Submit"></a>
+        </form>
+        <!-- <a href="registry.html" class="button">Submit</a> -->
+    </div>
     
 </body>
 </html>

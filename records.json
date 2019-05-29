@@ -1,0 +1,22 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "Ekom Ebong",
+            "qualification": "PHD",
+            "level": 3
+        },
+        {
+            "id": 2,
+            "name": "Sally Wanatoi",
+            "qualification": "MSC",
+            "level": 2
+        }
+    ],
+    "password": [
+        {
+            "username": "jones",
+            "password": "123456"
+        }
+    ]
+}
