@@ -1,13 +1,6 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "Ekom Ebong",
-      "qualification": "PHD",
-      "level": 3,
-      "paymentStatus": false
-    },
-    {
       "id": 2,
       "name": "Sally Wanatoi",
       "qualification": "MSC",
@@ -29,27 +22,6 @@
       "id": 4
     },
     {
-      "name": "Adabe echeim",
-      "position": "Full stack developer",
-      "qualification": "msc",
-      "level": "3",
-      "id": 5
-    },
-    {
-      "name": "Chukwudi",
-      "position": "elect",
-      "qualification": "BSc",
-      "level": "2",
-      "id": 6
-    },
-    {
-      "name": "kdfk",
-      "position": "jf m",
-      "qualification": "iee",
-      "level": "2",
-      "id": 7
-    },
-    {
       "name": "Joy Harford",
       "position": "PR Manager",
       "qualification": "BSc",
@@ -62,6 +34,14 @@
       "qualification": "PhD",
       "level": "4",
       "id": 9
+    },
+    {
+      "name": "chidi",
+      "position": "staff",
+      "qualification": "msc",
+      "level": "2",
+      "paymentStatus": "false",
+      "id": 10
     }
   ],
   "password": [

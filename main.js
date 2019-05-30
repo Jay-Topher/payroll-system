@@ -1,7 +1,14 @@
+
+// let but = '<td><buttom id=' + 
+
+
 $(document).ready(function() {
+    let $tableEmploy = $('#employTable');
+    let url = "http://localhost:3000/employees/";
     $.getJSON('http://localhost:3000/employees', function(data){
         let employeeData = "";
         $.each(data, function(key, value){
+            console.log(data)
             employeeData += '<tr>';
             employeeData += '<td>' + value.id + '</td>';
             employeeData += '<td>' + value.name + '</td>';
@@ -9,7 +16,8 @@ $(document).ready(function() {
             employeeData += '<td>' + value.position + '</td>';
             employeeData += '<td>' + value.level + '</td>';
             employeeData += '<td>' + value.paymentStatus + '</td>';
-            employeeData += '</tr>';
+            employeeData += '<td><button class="deleteEmp" data-id="';
+            employeeData +=  value.id + '" type="button">X</td></tr>';
         })
         $('#employTable').append(employeeData);
     })
@@ -29,18 +37,28 @@ $(document).ready(function() {
             paymentStatus: paymentStatus
         };
 
-        let tableEmploy = document.getElementById("#employTable");
 
         $.ajax({
             type: 'POST',
-            url: "http://localhost:3000/employees",
+            url: url,
             data: employee,
             success: function(emp){
-            // $('#employTable tr:last').after(`<tr><td>${emp.id}</td><td>${emp.name}</td><td>${emp.position}</td><td>${emp.qualification}</td><td>${emp.level}</td><td>${emp.paymentStatus}</td></tr>`);
-            // $('#employTable tr:last').after('<tr><td>' + emp.id + '</td><td>'+emp.name+'</td><td>'+emp.position+'</td><td>'+emp.qualification+'</td><td>'+emp.level+'</td><td>'+emp.paymentStatus+'</td></tr>');
+            
             }
         })
 
+    })
+
+    // adding a delete function
+    $tableEmploy.delegate('.deleteEmp', 'click', function() {
+        let id = $(this).attr('data-id');
+        $.ajax({
+            type: "DELETE",
+            url: url + id,
+            success: function () {
+                alert("Deleted Successfully")
+            }
+        });
     })
 
 });
