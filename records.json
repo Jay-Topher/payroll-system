@@ -27,6 +27,41 @@
       "qualification": "BSc",
       "level": "2",
       "id": 4
+    },
+    {
+      "name": "Adabe echeim",
+      "position": "Full stack developer",
+      "qualification": "msc",
+      "level": "3",
+      "id": 5
+    },
+    {
+      "name": "Chukwudi",
+      "position": "elect",
+      "qualification": "BSc",
+      "level": "2",
+      "id": 6
+    },
+    {
+      "name": "kdfk",
+      "position": "jf m",
+      "qualification": "iee",
+      "level": "2",
+      "id": 7
+    },
+    {
+      "name": "Joy Harford",
+      "position": "PR Manager",
+      "qualification": "BSc",
+      "level": "2",
+      "id": 8
+    },
+    {
+      "name": "Chukwudi",
+      "position": "Manager",
+      "qualification": "PhD",
+      "level": "4",
+      "id": 9
     }
   ],
   "password": [
