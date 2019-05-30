@@ -109,7 +109,7 @@ div#side-menu{
     display: inline;
     flex-direction: column;
 }
-#side-menu li a{
+#side-menu li a {
     text-decoration: none;
     list-style-type: none;
     border: 1px solid;
@@ -125,13 +125,29 @@ div#side-menu{
     
 }
 
-#side-menu li a:hover{
+#side-menu li button{
+    text-decoration: none;
+    list-style-type: none;
+    border: 1px solid;
+    padding: 10px 5px;
+    margin-right: 5px;
+    line-height: 2;
+    width: 200px;
+    border-color: rgb(164, 113, 223);
+    float: left;
+    text-align: center;
+    background-color: rgb(164, 113, 223);
+    color:white;
+}
+
+#side-menu li a:hover, #side-menu li button:hover{
     background-color: rgb(143, 216, 149);
     border-color: rgb(143, 216, 149);
 }
 #table1{
     margin-left: 50px;
     text-align: center;
+    margin-right: 50px;
 }
 
 #table1 td, #table1 th {
@@ -177,4 +193,18 @@ input[type=submit]:hover {
 form#addForm{
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+
+
+/* edit employee page */
+
+a.material-icons {
+    text-decoration: none;
+    /* font-size: 12px; */
+}
+
+button.material-icons {
+    background: none;
+    border: none;
 }

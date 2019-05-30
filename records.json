@@ -1,45 +1,11 @@
 {
   "employees": [
     {
-      "id": 2,
-      "name": "Sally Wanatoi",
-      "qualification": "MSC",
-      "level": 2,
-      "paymentStatus": false
-    },
-    {
-      "name": "Jones Ogolo",
-      "position": "Chief Engineer",
-      "qualification": "msc",
+      "name": "Chima Nweke",
+      "position": "Digital Marketer",
+      "qualification": "Bsc",
       "level": "3",
-      "id": 3
-    },
-    {
-      "name": "Francisca Asaugo",
-      "position": "Fashion Designer",
-      "qualification": "BSc",
-      "level": "2",
-      "id": 4
-    },
-    {
-      "name": "Joy Harford",
-      "position": "PR Manager",
-      "qualification": "BSc",
-      "level": "2",
-      "id": 8
-    },
-    {
-      "name": "Chukwudi",
-      "position": "Manager",
-      "qualification": "PhD",
-      "level": "4",
-      "id": 9
-    },
-    {
-      "name": "chidi",
-      "position": "staff",
-      "qualification": "msc",
-      "level": "2",
+      "salary": "150000",
       "paymentStatus": "false",
       "id": 10
     }
