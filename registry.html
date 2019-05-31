@@ -20,25 +20,26 @@
     </div>
     
     <div id="side-menu" class="side-nav">
-        <!-- <a href="#" class="btn-close" onclick="closeMenu()">&times;</a> -->
         <li><a href="/add employee.html" target="_blank">Add Employee</a></li>
-        <li><a href="#">View Employee</a></li>
         <li><a href="#">Edit Employee Details</a></li>
-        <li><button>Pay all Employees</button></li>
-        <li><a href="#">Delete an Employee</a></li>
+        <li><button id="payButton">Pay all Employees</button></li>
+        <li></li><input type="search" id="search" placeholder="Search"></li>
     </div>
     <div id="table1">
-        <table style="width:100%" id="employTable">
-            <tr>
-                <th>ID</th>
-                <th>Full Name</th>
-                <th>Qualification</th> 
-                <th>Position</th>
-                <th>Level</th>
-                <th>Salary</th>
-                <th>Payment Status</th>
-                <th></th>
-            </tr>
+        <table style="width:100%" >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Qualification</th> 
+                    <th>Position</th>
+                    <th>Level</th>
+                    <th>Salary</th>
+                    <th>Payment Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="employTable"></tbody>
         </table>
     </div>
     

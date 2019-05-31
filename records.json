@@ -1,13 +1,49 @@
 {
   "employees": [
     {
-      "name": "Chima Nweke",
-      "position": "Digital Marketer",
-      "qualification": "Bsc",
-      "level": "3",
-      "salary": "150000",
+      "name": "Jones Ogolo",
+      "position": "Chief Engineer",
+      "qualification": "msc",
+      "level": "6",
+      "salary": "120000",
       "paymentStatus": "false",
-      "id": 10
+      "id": 1
+    },
+    {
+      "name": "Adabe echeim",
+      "position": "CEO",
+      "qualification": "PhD",
+      "level": "3",
+      "salary": "60000",
+      "paymentStatus": "false",
+      "id": 2
+    },
+    {
+      "name": "Chukwudi",
+      "position": "Finance",
+      "qualification": "msc",
+      "level": "3",
+      "salary": "60000",
+      "paymentStatus": "false",
+      "id": 3
+    },
+    {
+      "name": "Francisca Asaugo",
+      "position": "Chief Engineer",
+      "qualification": "msc",
+      "level": "4",
+      "salary": "80000",
+      "paymentStatus": "false",
+      "id": 4
+    },
+    {
+      "name": "Jones Christopher Ogolo",
+      "position": "hs",
+      "qualification": "BSc",
+      "level": "2",
+      "salary": "40000",
+      "paymentStatus": "false",
+      "id": 5
     }
   ],
   "password": [

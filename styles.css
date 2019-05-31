@@ -140,6 +140,11 @@ div#side-menu{
     color:white;
 }
 
+input#search{
+    padding: 15px 20px;
+    /* border-radius: px; */
+}
+
 #side-menu li a:hover, #side-menu li button:hover{
     background-color: rgb(143, 216, 149);
     border-color: rgb(143, 216, 149);
