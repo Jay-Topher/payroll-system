@@ -113,12 +113,12 @@ $('#addButton').on('click', function(){
         
     });
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Search
     $('#search').keydown(function(){
         $.getJSON(url,function(data){
             let search = $('#search').val();
-            let rex = new RegExp(search,'i');
+            let rex = new RegExp(search,'i'); // Regular Expression
             let output;
             $.each(data, function (key, val) { 
                 if(rex.test(val.id) || rex.test(val.name)) {
@@ -137,7 +137,8 @@ $('#addButton').on('click', function(){
             });
             $('#employTable').html(output);
         });
-    })
-
+    });
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
    
 });
