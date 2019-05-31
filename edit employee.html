@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Employee</title>
+    <title>Edit Employee</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
@@ -15,6 +15,8 @@
 <body>
     <div class="formulate">
         <form action="/registry.html" id="editForm">
+            <label for="id">ID:</label><br>
+            <input type="number" name="id" id="getId"><br>
             <label for="fullname">Full Name:</label><br>
             <input type="text" name="fullname" class="fullName" id="fullname1" required><br>
             <label for="position">Position:</label><br>
@@ -24,7 +26,7 @@
             <label for="level">Level:</label><br>
             <input type="number" name="level" id="level1" class="level" required><br>
             <label for="payment-status" id="payment">Payment Status</label><br>
-            <input type="text" name="payment-status" value="false" readonly><br>
+            <input type="text" name="payment-status" value="false" id=".paymentStatus" readonly><br>
             <input type="button" class="button" id="addButton1" value="Add Data">
     
     

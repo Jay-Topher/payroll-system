@@ -44,6 +44,14 @@
       "salary": "40000",
       "paymentStatus": "false",
       "id": 5
+    },
+    {
+      "name": "Njideka Biens",
+      "position": "Teacher",
+      "qualification": "Msc",
+      "level": "3",
+      "salary": "60000",
+      "id": 6
     }
   ],
   "password": [

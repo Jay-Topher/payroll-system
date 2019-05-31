@@ -19,7 +19,7 @@ $(document).ready(function() {
             employeeData += '<td>' + value.salary + '</td>';
             employeeData += '<td class="pay">' + value.paymentStatus + '</td>';
             employeeData += '<td><button class="deleteEmp material-icons" data-id="';
-            employeeData += value.id + '" type="button">delete</button><a href="edit employee.html" id="editButton" class="material-icons" data-id="';
+            employeeData += value.id + '" type="button">delete</button><a href="edit employee.html" id="editButton" class="material-icons editEmp" data-id="';
             employeeData += value.id + '">edit</a></td></tr>'; // onclick="window.location.href=\'edit employee.html\'
         })
         $('#employTable').append(employeeData);
@@ -28,6 +28,34 @@ $(document).ready(function() {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  get form data and populate table
     
+function getSalary(level) {
+    switch (level) {
+        case '1':
+            return 20000;
+            break;
+        case '2':
+            return 40000;
+            break;
+        case '3':
+            return 60000;
+            break;
+        
+        case '4':
+            return 80000;
+            break;
+
+        case '5':
+            return 100000;
+            break;
+
+        case '6':
+            return 120000;
+            break;
+        default:
+            return 150000;
+            break;
+    }
+}
 $('#addButton').on('click', function(){
         let fullName = $('#fullname').val();
         let position = $('#position').val();
@@ -35,34 +63,6 @@ $('#addButton').on('click', function(){
         let level = $('#level').val();
         let paymentStatus = $('#paymentStatus').val();
         
-        function getSalary(level) {
-            switch (level) {
-                case '1':
-                    return 20000;
-                    break;
-                case '2':
-                    return 40000;
-                    break;
-                case '3':
-                    return 60000;
-                    break;
-                
-                case '4':
-                    return 80000;
-                    break;
-
-                case '5':
-                    return 100000;
-                    break;
-
-                case '6':
-                    return 120000;
-                    break;
-                default:
-                    return 150000;
-                    break;
-            }
-        }
 
         let employee = {
             name: fullName,
@@ -78,8 +78,8 @@ $('#addButton').on('click', function(){
             type: 'POST',
             url: url,
             data: employee,
-            success: function(emp){
-            
+            success: function(){
+                alert('Added Successfully');
             }
         })
 
@@ -100,19 +100,18 @@ $('#addButton').on('click', function(){
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Pay all employees
-    $('#payButton').on('click', function (e) { 
-        // e.preventDefault();
-        let paymentStatus = $('#pay').val();
-        // $.each(e, function (key, value) { 
-        //     //  console.log(paymentStatus.key);
-        //      console.log(paymentStatus.value);
-        // });
-        // let paymentStatus = $('#payment').val;
-        $('.pay').html(true);
-        
-        
-    });
-
+    $('#payButton').click (function() {
+        $('.pay').val("true");
+    //     let id = $(this).attr('data-id');
+    //     $.ajax({
+    //         type: "PATCH",
+    //         url: url + id,
+    //         data: {paymentStatus: true},
+    //         success: function () {
+    //             alert("Deleted Successfully")
+    //         }
+    //     });
+    })
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Search
     $('#search').keydown(function(){
@@ -139,6 +138,43 @@ $('#addButton').on('click', function(){
         });
     });
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
+    $('#addButton1').on('click', function(){
+        let id = $('#getId').val()
+
+        let fullName = $('#fullname1').val();
+        let position = $('#position1').val();
+        let qualification = $('#qualification1').val();
+        let level = $('#level1').val();
+        // let paymentStatus = $('#paymentStatus1').val();
+
+        $.ajax({
+            type: "GET",
+            url: url,
+            
+            success: function (data) {
+                $.each(data, function (key, value) { 
+                    if(id == value.id){
+                        $.ajax({
+                            type: "put",
+                            url: url + id,
+                            data: {
+                                name:fullName,
+                                position:position,
+                                qualification:qualification,
+                                level:level,
+                                paymentStatus:false,
+                                salary: getSalary(level)
+                            },
+                            dataType: "dataType",
+                            success: function (response) {
+                                
+                            }
+                        });
+                    }
+                });
+                
+            }
+        });
+    })
    
 });
